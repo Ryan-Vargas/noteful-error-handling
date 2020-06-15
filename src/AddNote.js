@@ -54,9 +54,9 @@ class AddNote extends React.Component {
     let noteNameList = this.noteNameList();
     let errorMessage = '';
     if (name.length === 0) {
-      errorMessage += 'Name must be something.  ';
+      errorMessage += 'You must enter a name.';
     } else if (noteNameList.includes(name)) {
-      errorMessage += 'That name is already there.  ';
+      errorMessage += 'That name already exists.';
     }
     errorMessage += this.validateContent();
     if (errorMessage !== '') {
@@ -79,9 +79,9 @@ class AddNote extends React.Component {
     let noteContentList = this.noteContentList();
     let errorMessage = '';
     if (content.length === 0) {
-      errorMessage += 'Content must be something.';
+      errorMessage += 'You must enter content.';
     } else if (noteContentList.includes(content)) {
-      errorMessage += 'That content has already been used.';
+      errorMessage += 'That content already exists.';
     }
     return errorMessage;
   };

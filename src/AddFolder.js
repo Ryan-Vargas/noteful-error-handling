@@ -37,7 +37,7 @@ class AddFolder extends React.Component {
     if (name.length === 0) {
       this.displayError('Name is required');
     } else if (folders.includes(name)) {
-      this.displayError('Folder already exists!');
+      this.displayError('That folder already exists.');
     } else {
       this.postFolder(name);
     }
